@@ -1,0 +1,33 @@
+public class SimplePromptGame {
+
+    public static void main(String[] args) {
+
+        // Prompt and Strategy
+        String prompt = "Explain AI in simple words";
+        String strategy = "direct";  // Try: direct, narrative, interrogative, contextual
+
+        // Generate response
+        String response = "AI is like a smart robot that learns from data and helps us.";
+
+        // Calculate score based on strategy
+        double score = 0.0;
+
+        if (strategy.equalsIgnoreCase("direct")) {
+            score = 0.7;
+        } else if (strategy.equalsIgnoreCase("narrative")) {
+            score = 0.9;
+        } else if (strategy.equalsIgnoreCase("interrogative")) {
+            score = 0.8;
+        } else if (strategy.equalsIgnoreCase("contextual")) {
+            score = 0.6;
+        } else {
+            score = 0.5; // default
+        }
+
+        // Print result
+        System.out.println("Prompt: " + prompt);
+        System.out.println("Strategy: " + strategy);
+        System.out.println("AI Response: " + response);
+        System.out.println("Score: " + score);
+    }
+}
